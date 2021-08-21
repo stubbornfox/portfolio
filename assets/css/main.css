@@ -1,0 +1,226 @@
+html {
+  scroll-behavior: smooth;
+   font-family: WorkSans;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('~assets/fonts/work-sans/WorkSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url('~assets/fonts/work-sans/WorkSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('~assets/fonts/work-sans/WorkSans-SemiBold.ttf') format('truetype');
+}
+
+:root {
+  --card-width: 511px;
+  --card-height: 320px;
+  --gray-50:  #F7FAFC;
+  --gray-100:  #EDF2F7;
+  --gray-500:  #718096;
+  --gray-800: #1A202C;
+}
+
+.cover {
+  background-image:  url('~assets/images/cover.svg');
+  height:  100vh;
+}
+
+.title {
+  color: #48BB78;
+  font-weight: 600;
+  font-size: 4rem;
+}
+
+.ha-le {
+  background-color: #F0FFF4 !important;
+  border: 1px solid transparent !important;
+  background-image: url("~/assets/images/face-round.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: transparent !important;
+  box-shadow: 12px -15px 12px 15px #F0FFF4;
+}
+
+.carosuel {
+  position: relative;
+  height: 450px;
+  width: var(--card-width);
+  overflow: visible;
+}
+
+.page-card {
+  background: #FFFFFF;
+  box-shadow: 0px 10px 10px -5px rgba(45, 55, 72, 0.04), 0px 20px 25px -5px rgba(45, 55, 72, 0.1);
+  border-radius: 24px;
+  padding: 50px 51px;
+  font-size: 2rem;
+  font-family: WorkSans;
+  font-weight: 600;
+  overflow: hidden;
+  cursor: pointer;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  width: var(--card-width);
+  height: var(--card-height);
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  top:  0;
+}
+
+.page-card[cardNumber="1"] {
+  width: var(--card-width);
+  height: var(--card-height);
+  z-index: 4;
+  /*transform: translateY(0) scale(1) !important;*/
+}
+
+.page-card[cardNumber="2"] {
+  z-index: 3;
+  /*transform: translateY(65px) scale(0.85);*/
+  zoom:  0.85;
+  top:  100px;
+}
+
+.page-card[cardNumber="3"] {
+  z-index: 2;
+  /*transform: translateY(125px) scale(0.7);*/
+  zoom:  0.7;
+  top:  250px;
+}
+
+.page-card[cardNumber="4"] {
+  z-index: 1;
+  /*transform: translateY(190px) scale(0.5);*/
+  top:  550px;
+  zoom:  0.5;
+}
+
+.page-card.active {
+  /*cursor: default;
+  transform: scale(1);
+  top: 0;
+  z-index: 4;*/
+  /*animation-name: swing-forwards;*/
+}
+
+.page-card.active .card-content {
+  /*opacity: 1;*/
+}
+
+.blog {
+  margin: 100px auto;
+}
+
+.blog img{
+  box-shadow: 0px 25px 50px -12px rgba(45, 55, 72, 0.25);
+  border-radius: 16px;
+}
+
+.contact {
+  background-image:  url('~assets/images/contact-bg.svg');
+  position: top-left;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+}
+
+.blog-content {
+  max-width: 500px;
+  margin-right: 40px;
+}
+
+.contact-form {
+  padding: 40px;
+  width: 560px;
+  background-color: var(--gray-50);
+  border-radius: 16px;
+}
+
+.contact-form input, .contact-form textarea {
+  background-color: var(--gray-100);
+  border:  none;
+  padding: 18px;
+  border-radius: 12px;
+  min-height: 60px;
+}
+
+.contact-submit {
+  background: linear-gradient(90.81deg, #F56565 0%, #ED64A6 100%);
+  border-radius: 12px;
+  color:  white;
+  min-height: 60px;
+}
+
+.current-position {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 110%;
+  color: var(--gray-800);
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 64px 40px 64px 0;
+  max-width: 400px;
+}
+
+.page-card:hover {
+  box-shadow: 10px 20px 20px 2px rgba(45, 55, 72, 0.04), 10px 40px 45px 2px rgba(45, 55, 72, 0.1);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*opacity: 0;*/
+  /*transition: 0.3s ease opacity;*/
+}
+
+.gray {
+  color: #2D3748;
+}
+
+.green {
+  color:  #48BB78;
+}
+
+.gray-pale {
+  color: #718096;
+  font-weight: 400;
+}
+
+.orange {
+  color: #ED8936;
+}
+
+.pink {
+  color: #F56565;
+}
+
+.bg-red-400 {
+  background-color: #F56565;
+}
+
+.gray-500 {
+  color:  var(--gray-500);
+}
+
+
