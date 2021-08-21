@@ -7,11 +7,11 @@
               <c-avatar size="2xl" name="Ha Le" class="ha-le wow animate__slideInDown"/>
             </c-stack>
             <c-text text-align="center">
-              <h1 class="title wow animate__fadeInUp">Software Engineer</h1>
+              <h1 class="title wow animate__fadeIn">Software Engineer</h1>
             </c-text>
             <c-flex align="center" justify="center" class="carosuel" flexDirection="column"  mt="7">
               <Card ref="card1" v-bind:class="{ backward: backward == 1}" :active="currentCard == 1" :cardNumber="cardNumber1" :pos="1" @active-card="update" class="wow animate__slideInUp" @animationend.native="removeAnimateClass"/>
-              <EducationCard ref="card2" :active="currentCard == 2" :cardNumber="cardNumber2" :pos="2"  @active-card="update" class="wow animate__fadeInUp animate__delay-1s"
+              <EducationCard ref="card2" :active="currentCard == 2" :cardNumber="cardNumber2" :pos="2"  @active-card="update" class="wow animate__fadeInUp"
                 @animationend.native="removeAnimateClass" v-bind:class="{ backward: backward == 2}"/>
               <BlogCard ref="card3" :active="currentCard == 3" :cardNumber="cardNumber3" :pos="3"  @active-card="update" class="wow animate__fadeInUp animate__delay-1s"
                 @animationend.native="removeAnimateClass" v-bind:class="{ backward: backward == 3}"/>
@@ -37,7 +37,7 @@
         </c-stack>
       </div>
       <div class="blog-image">
-        <img src="~/assets/images/blog.png" width="600px" />
+        <img src="~/assets/images/blog-min.png" width="600px" />
       </div>
     </c-flex>
     <c-flex class="contact" width="100%" justify="center">
