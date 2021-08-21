@@ -7,19 +7,22 @@
               <c-avatar size="2xl" name="Ha Le" class="ha-le wow animate__slideInDown"/>
             </c-stack>
             <c-text text-align="center">
-              <h1 class="title wow animate__fadeIn">Software Engineer</h1>
+              <h1 class="title wow animate__fadeInUp">Software Engineer</h1>
             </c-text>
             <c-flex align="center" justify="center" class="carosuel" flexDirection="column"  mt="7">
-              <Card ref="card1" :active="currentCard == 1" :cardNumber="cardNumber1" :pos="1" @active-card="update" class="wow animate__slideInUp"/>
-              <EducationCard ref="card2" :active="currentCard == 2" :cardNumber="cardNumber2" :pos="2"  @active-card="update" class="wow animate__fadeInUp"/>
-              <BlogCard ref="card3" :active="currentCard == 3" :cardNumber="cardNumber3" :pos="3"  @active-card="update" class="wow animate__fadeInUp"/>
-              <ContactCard ref="card4" :active="currentCard == 4" :cardNumber="cardNumber4" :pos="4"  @active-card="update" class="wow animate__fadeInUp" />
+              <Card ref="card1" v-bind:class="{ backward: backward == 1}" :active="currentCard == 1" :cardNumber="cardNumber1" :pos="1" @active-card="update" class="wow animate__slideInUp" @animationend.native="removeAnimateClass"/>
+              <EducationCard ref="card2" :active="currentCard == 2" :cardNumber="cardNumber2" :pos="2"  @active-card="update" class="wow animate__fadeInUp"
+                @animationend.native="removeAnimateClass" v-bind:class="{ backward: backward == 2}"/>
+              <BlogCard ref="card3" :active="currentCard == 3" :cardNumber="cardNumber3" :pos="3"  @active-card="update" class="wow animate__fadeInUp"
+                @animationend.native="removeAnimateClass" v-bind:class="{ backward: backward == 3}"/>
+              <ContactCard ref="card4" :active="currentCard == 4" :cardNumber="cardNumber4" :pos="4"  @active-card="update" class="wow animate__fadeInUp"
+                @animationend.native="removeAnimateClass" v-bind:class="{ backward: backward == 4}"/>
             </c-flex>
           </c-flex>
       </c-flex>
     </div>
     <c-flex class="blog" width="100%" justify="center" maxW="5xl" align="center">
-      <div class="blog-content wow animate__fadeIn">
+      <div class="blog-content wow animate__fadeInUp">
         <c-stack spacing="3">
           <c-text fontSize="5xl" fontWeight="700" lineHeight="1">
             Why I want to learn  <span class="pink">Machine Learning</span>
@@ -71,7 +74,7 @@
 
   export default {
     mounted() {
-      this.$nextTick(() => {
+      this.$nextTick((tep) => {
         if (process.browser) { // On the page mounted In the life cycle Instantiate according to the environment WOW
           new WOW({animateClass: 'animate__animated'}).init()
         }
@@ -79,6 +82,7 @@
     },
     data() {
       return {
+        backward: 0,
         currentCard: 1,
         cardNumber1: 1,
         cardNumber2: 2,
@@ -87,32 +91,33 @@
       }
     },
     methods: {
+      removeAnimateClass(animateEvent){
+        animateEvent.target.classList.remove('animate__animated', 'animate__slideInUp', 'animate__fadeInUp', 'wow');
+      },
       update(cardNumber, pos) {
         this.currentCard = pos
-        if (pos == 2) {
-          this.cardNumber1 = 4
-          this.cardNumber2 = 1
-          this.cardNumber3 = 2
-          this.cardNumber4 = 3
+        this.cardNumber1 -= 1
+        this.cardNumber2 -= 1
+        this.cardNumber3 -= 1
+        this.cardNumber4 -= 1
 
+        if(this.cardNumber1 == 0) {
+          this.cardNumber1 = 4
+          this.backward = 1
         }
-        if (pos == 3) {
-          this.cardNumber1 = 3
+
+        if(this.cardNumber2 == 0) {
           this.cardNumber2 = 4
-          this.cardNumber3 = 1
-          this.cardNumber4 = 2
+          this.backward = 2
         }
-        if (pos == 4) {
-          this.cardNumber1 = 2
-          this.cardNumber2 = 3
+
+        if(this.cardNumber3 == 0) {
           this.cardNumber3 = 4
-          this.cardNumber4 = 1
+          this.backward = 3
         }
-        if (pos == 1) {
-          this.cardNumber1 = 1
-          this.cardNumber2 = 2
-          this.cardNumber3 = 3
+        if(this.cardNumber4 == 0) {
           this.cardNumber4 = 4
+          this.backward = 4
         }
       }
     }
