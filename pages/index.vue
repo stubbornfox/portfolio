@@ -11,11 +11,11 @@
             </c-text>
             <c-flex align="center" justify="center" class="carosuel" flexDirection="column"  mt="7">
               <Card ref="card1" v-bind:class="{ backward: backward == 1}" :active="currentCard == 1" :cardNumber="cardNumber1" :pos="1" @active-card="update" class="wow animate__slideInUp" @animationend.native="removeAnimateClass"/>
-              <EducationCard ref="card2" :active="currentCard == 2" :cardNumber="cardNumber2" :pos="2"  @active-card="update" class="wow animate__fadeInUp"
+              <EducationCard ref="card2" :active="currentCard == 2" :cardNumber="cardNumber2" :pos="2"  @active-card="update" class="wow animate__fadeInUp animate__delay-1s"
                 @animationend.native="removeAnimateClass" v-bind:class="{ backward: backward == 2}"/>
-              <BlogCard ref="card3" :active="currentCard == 3" :cardNumber="cardNumber3" :pos="3"  @active-card="update" class="wow animate__fadeInUp"
+              <BlogCard ref="card3" :active="currentCard == 3" :cardNumber="cardNumber3" :pos="3"  @active-card="update" class="wow animate__fadeInUp animate__delay-1s"
                 @animationend.native="removeAnimateClass" v-bind:class="{ backward: backward == 3}"/>
-              <ContactCard ref="card4" :active="currentCard == 4" :cardNumber="cardNumber4" :pos="4"  @active-card="update" class="wow animate__fadeInUp"
+              <ContactCard ref="card4" :active="currentCard == 4" :cardNumber="cardNumber4" :pos="4"  @active-card="update" class="wow animate__fadeInUp animate__delay-1s"
                 @animationend.native="removeAnimateClass" v-bind:class="{ backward: backward == 4}"/>
             </c-flex>
           </c-flex>
@@ -92,7 +92,7 @@
     },
     methods: {
       removeAnimateClass(animateEvent){
-        animateEvent.target.classList.remove('animate__animated', 'animate__slideInUp', 'animate__fadeInUp', 'wow');
+        animateEvent.target.classList.remove('animate__animated', 'animate__slideInUp', 'animate__fadeInUp', 'wow', 'animate__delay-1s');
       },
       update(cardNumber, pos) {
         this.currentCard = pos

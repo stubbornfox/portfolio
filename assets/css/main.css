@@ -104,7 +104,7 @@ html {
   top:  90px;
   width: calc( var(--card-width) * 0.85);
   height: calc( var(--card-height) * 0.85);
-  animation-delay: 0.5s;
+  animation-delay: 1s;
 }
 
 
