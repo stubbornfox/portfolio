@@ -38,6 +38,13 @@ html {
   --gray-800: #1A202C;
 }
 
+@media (max-width: 600px) {
+  :root {
+    --card-width: 80%;
+  }
+}
+
+
 .cover {
   background-image:  url('~assets/images/cover.svg');
   height:  100vh;
@@ -46,7 +53,6 @@ html {
 .title {
   color: #48BB78;
   font-weight: 600;
-  font-size: 4rem;
 }
 
 .ha-le {
@@ -164,8 +170,6 @@ html {
 }
 
 .contact-form {
-  padding: 40px;
-  width: 560px;
   background-color: var(--gray-50);
   border-radius: 16px;
 }
@@ -194,7 +198,6 @@ html {
   flex: none;
   order: 0;
   flex-grow: 0;
-  margin: 64px 40px 64px 0;
   max-width: 400px;
 }
 
