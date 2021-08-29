@@ -51,10 +51,10 @@
             <c-text fontSize="5xl" fontWeight="700">Contact me<span class="pink">!</span></c-text>
             <c-stack spacing="3">
               <c-text fontSize="sm" class="gray-500" fontWeight="400">Send me a message then I will reach you as soon as possible</c-text>
-              <c-input placeholder="Email" size="md" />
-              <c-input placeholder="Your name" size="md" />
-              <c-input placeholder="Your phone" size="md" />
-              <c-textarea placeholder="Write me a message" />
+              <c-input placeholder="Email" size="md" name="email" />
+              <c-input placeholder="Your name" size="md" name="name" />
+              <c-input placeholder="Your phone" size="md" name="phone"/>
+              <c-textarea placeholder="Write me a message" name="message"/>
               <c-button-group size="md"  width="100%">
                 <c-button class="contact-submit" width="100%" type="submit">
                   Submit
