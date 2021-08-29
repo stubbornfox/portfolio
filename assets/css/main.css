@@ -40,7 +40,7 @@ html {
 
 @media (max-width: 600px) {
   :root {
-    --card-width: 80%;
+    --card-width: 96%;
   }
 }
 
@@ -142,11 +142,7 @@ html {
   height: -webkit-fill-available;
 }
 
-.blog {
-  margin: 170px auto;
-}
-
-.blog img{
+.blog-image {
   box-shadow: 0px 25px 50px -12px rgba(45, 55, 72, 0.25);
   border-radius: 16px;
 }

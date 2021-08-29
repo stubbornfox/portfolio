@@ -1,5 +1,5 @@
 <template>
-  <div class="page-card" v-bind:class="{ active: active}" @click="activeCard" :cardNumber="cardNumber">
+  <c-box class="page-card" v-bind:class="{ active: active}" @click="activeCard" :cardNumber="cardNumber" :fontSize="['1.5rem','1.5rem', '2rem']">
     <div class="card-content">
       <span class="gray">Make money from</span>
       <span class="green">coding and investing</span>
@@ -10,7 +10,7 @@
       </c-text>
       <c-button variant-color="green" rounded="20px">Experience & Skills</c-button>
     </div>
-  </div>
+  </c-box>
 </template>
 <script>
   export default {

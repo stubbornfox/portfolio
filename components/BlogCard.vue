@@ -1,5 +1,5 @@
 <template>
-  <div class="page-card" v-bind:class="{ active: active}" @click="activeCard" :cardNumber="cardNumber">
+  <c-box class="page-card" v-bind:class="{ active: active}" @click="activeCard" :cardNumber="cardNumber" :fontSize="['1.5rem','1.5rem', '2rem']">
     <div class="card-content">
       <span class="gray">Blog</span>
       <span class="pink">ML & Web Application</span>
@@ -11,7 +11,7 @@
       <c-button class="bg-red-400" rounded="20px" v-scroll-to="{
      el: '#blog-content', offset: -200, lazy: false}">Start Reading</c-button>
     </div>
-  </div>
+  </c-box>
 </template>
 <script>
   export default {

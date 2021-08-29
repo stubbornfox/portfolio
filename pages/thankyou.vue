@@ -4,10 +4,10 @@
       <c-flex align="center">
         <c-flex size="100%" align="center" justify="center" height="100vh" flexDirection="column">
           <c-text text-align="center">
-            <h1 class="title wow animate__fadeIn">Thank you very much</h1>
+            <c-heading as='h1' class="title wow animate__fadeIn">Thank you very much</c-heading>
           </c-text>
           <c-text fontSize="md" class="gray-500" fontWeight="600" text-align="center" bg="white">
-            It's good that you contact to me! Have a nice day.
+            It's amazing that you contact to me! Have a nice day.
             <c-text class="pink" fontWeight="600" fontSize="md">
              <NuxtLink to="/">🏠 Go Home</NuxtLink>
           </c-text>
