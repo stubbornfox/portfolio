@@ -46,7 +46,7 @@
           <div class="current-position wow animate__slideInLeft">
             Software Developer <span class="pink">&</span> Data Scientist
           </div>
-          <form class="contact-form wow animate__slideInRight" ml="5" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="">
+          <form class="contact-form wow animate__slideInRight" ml="5" name="contact" method="POST" netlify netlify-honeypot="bot-field" action="">
             <input type="hidden" name="form-name" value="contact" />
             <c-text fontSize="5xl" fontWeight="700">Contact me<span class="pink">!</span></c-text>
             <c-stack spacing="3">
