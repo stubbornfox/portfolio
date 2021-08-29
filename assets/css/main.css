@@ -145,6 +145,12 @@ html {
   border-radius: 16px;
 }
 
+.contact-card {
+  background-image:  url('~assets/images/contact-bg.svg');
+  background-position: top left;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 .contact {
   background-image:  url('~assets/images/contact-bg.svg');
   position: top-left;

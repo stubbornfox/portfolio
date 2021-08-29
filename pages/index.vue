@@ -15,13 +15,13 @@
                 @animationend.native="removeAnimateClass" v-bind:class="{ backward: backward == 2}"/>
               <BlogCard ref="card3" :active="currentCard == 3" :cardNumber="cardNumber3" :pos="3"  @active-card="update" class="wow animate__fadeInUp animate__delay-1s"
                 @animationend.native="removeAnimateClass" v-bind:class="{ backward: backward == 3}"/>
-              <ContactCard ref="card4" :active="currentCard == 4" :cardNumber="cardNumber4" :pos="4"  @active-card="update" class="wow animate__fadeInUp animate__delay-1s"
+              <ContactCard ref="card4" :active="currentCard == 4" :cardNumber="cardNumber4" :pos="4" @active-card="update" class="wow animate__fadeInUp animate__delay-1s"
                 @animationend.native="removeAnimateClass" v-bind:class="{ backward: backward == 4}"/>
             </c-flex>
           </c-flex>
       </c-flex>
     </div>
-    <c-flex class="blog" width="100%" justify="center" maxW="5xl" align="center">
+    <c-flex class="blog" width="100%" justify="center" maxW="5xl" align="center" id="blog-content">
       <div class="blog-content wow animate__fadeInUp">
         <c-stack spacing="3">
           <c-text fontSize="5xl" fontWeight="700" lineHeight="1">
@@ -29,18 +29,17 @@
           </c-text>
           <c-text fontSize="sm" class="gray-500" fontWeight="400">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages...</c-text>
           <c-button-group size="md"  width="100%" mt="5">
-              <c-button rounded="20px" class="bg-red-400" variant-color="red">
-                Read more
-              </c-button>
-              <c-link s="router-link" to="/" color="teal.500">Discover my blogs</c-link>
-              </c-button-group>
+            <c-button rounded="20px" class="bg-red-400" variant-color="red">
+              Read more
+            </c-button>
+            </c-button-group>
         </c-stack>
       </div>
       <div class="blog-image">
         <img src="~/assets/images/blog-min.png" width="600px" />
       </div>
     </c-flex>
-    <c-flex class="contact" width="100%" justify="center">
+    <c-flex class="contact" width="100%" justify="center" id="contact-me">
       <c-flex align="center" maxW="5xl">
         <c-flex align="center">
           <div class="current-position wow animate__slideInLeft">
@@ -95,7 +94,9 @@
       removeAnimateClass(animateEvent){
         animateEvent.target.classList.remove('animate__animated', 'animate__slideInUp', 'animate__fadeInUp', 'wow', 'animate__delay-1s');
       },
-      update(cardNumber, pos) {
+      update(cardNumber, pos, type) {
+        if (type == 'button')
+          return
         this.currentCard = pos
         this.cardNumber1 -= 1
         this.cardNumber2 -= 1

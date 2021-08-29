@@ -8,7 +8,8 @@
           Raising sentiments in web development with ruby on rails, tutorials of machine learning, how good to know both ML and SE.
         </p>
       </c-text>
-      <c-button class="bg-red-400" rounded="20px">Start Reading</c-button>
+      <c-button class="bg-red-400" rounded="20px" v-scroll-to="{
+     el: '#blog-content', offset: -200, lazy: false}">Start Reading</c-button>
     </div>
   </div>
 </template>
@@ -16,8 +17,8 @@
   export default {
     props: ['active', 'cardNumber', 'pos'],
     methods: {
-      activeCard() {
-        this.$emit("active-card", this.cardNumber, this.pos);
+      activeCard(event) {
+        this.$emit("active-card", this.cardNumber, this.pos, event.target.type);
       }
     }
   }
