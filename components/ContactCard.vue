@@ -1,5 +1,5 @@
 <template>
-  <c-box class="page-card contact-card" v-bind:class="{ active: active}" @click="activeCard" :cardNumber="cardNumber" :fontSize="['1.5rem','1.5rem', '2rem']">
+  <c-box class="page-card contact-card" v-bind:class="{ active: active}" @click="activeCard" :cardNumber="cardNumber" :fontSize="['1.5rem','1.5rem', '2rem']" :p="['20px', '20px', '50px 50px 35px']">
     <div class="card-content">
       <c-text class="pink" lineHeight="1">
         Let's talk :)
