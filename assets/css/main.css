@@ -139,7 +139,8 @@ html {
 
 .page-card .card-content {
   overflow: hidden;
-  height: -webkit-fill-available;
+  -moz-overflow:hidden;
+  height: 100%;
 }
 
 .blog-image {
