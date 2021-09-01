@@ -21,6 +21,43 @@
           </c-flex>
       </c-flex>
     </div>
+    <c-flex id="education" align="center" flexDirection="column" :p="['40px 0', '40px 0','100px 0']">
+      <c-heading as="h2" :fontSize="['2rem','2rem','4xl','5xl']" fontWeight="700" lineHeight="1" m="20px" class="wow animate__fadeIn">
+        <span class="orange">Education Background</span>
+      </c-heading>
+      <div class="education-bg"></div>
+        <c-box class='education-content'>
+           <p>
+            <c-flex class="wow animate__slideInLeft">
+              <c-avatar size="xl" name="UT" class="twente" borderRadius="md"/>
+              <c-box ml="3">
+                <c-box>University of Twente - Master Computer Science</c-box>
+                <c-box>(Le Thi Nhi Ha scholarship)</c-box>
+                <c-box>2020-2022</c-box>
+              </c-box>
+            </c-flex>
+          </p>
+          <p>
+            <c-flex  class="wow animate__slideInRight">
+            <c-avatar size="xl" name="UT" class="fpt" borderRadius="md"/>
+             <c-box ml="3">
+              <c-box >FPT University - Bachelor Software Engineering</c-box>
+              <c-box>(Full scholarship)</c-box>
+              <c-box>2010-2014</c-box>
+            </c-box>
+          </c-flex>
+          </p>
+          <p>
+            <c-flex  class="wow animate__slideInLeft">
+              <c-avatar size="xl" name="UT" class="lqd" borderRadius="md"/>
+             <c-box ml="3">
+              <c-box >Lê Quý Đôn High School for the Gifted, Quang Tri</c-box>
+              <c-box>2007-2010</c-box>
+              </c-box>
+            </c-flex>
+          </p>
+        </c-box>
+    </c-flex>
     <c-flex :m="['30px auto', '30px auto', '170px auto']" width="100%" justify="center" maxW="5xl" align="center" id="blog-content" :flexDirection="['column', 'column', 'row']">
       <c-box class="blog-content wow animate__fadeInUp" :order="['1', '1', '0', '0']" :m="['20px','20px', '0 40px 0 0']">
         <c-stack spacing="3">

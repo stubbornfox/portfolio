@@ -153,6 +153,7 @@ html {
   background-size: contain;
   background-repeat: no-repeat;
 }
+
 .contact {
   background-image:  url('~assets/images/contact-bg.svg');
   position: top-left;
@@ -236,6 +237,117 @@ html {
 .gray-500 {
   color:  var(--gray-500);
 }
+
+.education-bg {
+  opacity: 0.09;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image:  url('~assets/images/hero1.svg');
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position-x: 900px;
+}
+
+#education {
+  position: relative;
+}
+
+.education-content {
+  min-width: 300px;
+  margin: auto;
+  position: relative;
+}
+
+.education-content p {
+  font-size: 1em;
+  line-height: 1.75em;
+  border-top: 3px solid;
+  border-image: linear-gradient(to right, #F56565 0%, #ED64A6 100%);
+  border-image-slice: 1;
+  border-width: 3px;
+  margin: 0;
+  padding: 40px;
+  counter-increment: section;
+  position: relative;
+  color: #34435E;
+  border-width: 0;
+}
+
+.education-content p::before {
+  /*content: counter(section);*/
+  position: absolute;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  background-color: #34435E;
+  text-align: center;
+  line-height: 2rem;
+  color: #fff;
+  font-size: 1em;
+  border-style: none;
+  margin-top: 10px;
+}
+
+.twente {
+  background-image:  url('~assets/images/twente.jpeg');
+  background-size: contain;
+  color:  transparent !important;
+  background-color: transparent !important;
+}
+
+.fpt {
+  background-image:  url('~assets/images/fpt.jpeg');
+  background-size: contain;
+  color:  transparent !important;
+   background-color: transparent !important;
+}
+
+.lqd {
+  background-image:  url('~assets/images/lqd.png');
+  background-size: contain;
+  color:  transparent !important;
+  background-color: transparent !important;
+  background-repeat: no-repeat;
+}
+
+.education-content p:nth-child(odd) {
+  border-right: 3px solid;
+  padding-left: 0;
+  border-bottom: 3px solid;
+}
+
+.education-content p:nth-child(odd)::before {
+  left: 100%;
+  margin-left: -16px;
+}
+
+.education-content p:nth-child(even) {
+  border-left: 3px solid;
+  padding-right: 0;
+}
+
+.education-content p:nth-child(even)::before {
+  right: 100%;
+  margin-right: -16px;
+}
+
+
+.education-content p:first-child {
+  border-top: 0;
+  border-top-right-radius:0;
+  border-top-left-radius:0;
+}
+
+.education-content p:last-child {
+  border-bottom-right-radius:0;
+  border-bottom-left-radius:0;
+  border-top: 3px solid;
+}
+
+
 
 @keyframes moveback {
   0%   { top: 0; z-index: 4; width: calc( var(--card-width));  height: calc( var(--card-height));}

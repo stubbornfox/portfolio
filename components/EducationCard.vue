@@ -4,7 +4,8 @@
       <span class="gray">Almost Master in</span>
       <span class="orange">Computer Science</span>
       <img src="~assets/images/hero1.svg" width="120">
-      <c-button variant-color="orange" mb="4"  mt="2" rounded="20px">Education</c-button>
+      <c-button variant-color="orange" mb="4"  mt="2" rounded="20px"v-scroll-to="{
+     el: '#education', offset: 0, lazy: false}">Education</c-button>
     </div>
   </c-box>
 </template>
@@ -13,7 +14,7 @@
     props: ['active', 'cardNumber', 'pos'],
     methods: {
       activeCard() {
-        this.$emit("active-card", this.cardNumber, this.pos);
+        this.$emit("active-card", this.cardNumber, this.pos, event.target.type);
       }
     }
   }
