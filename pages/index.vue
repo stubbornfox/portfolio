@@ -28,7 +28,9 @@
           <c-stack :spacing="2" class="experience-card wow animate__slideInUp">
             <c-box>
               <c-flex align="center">
-                <img src="~/assets/images/gameloft.png" class="company-logo"/>
+                <c-link href="https://www.gameloft-sea.com/" target="_blank">
+                  <img src="~/assets/images/gameloft.png" class="company-logo"/>
+                </c-link>
                 <c-box>
                   <c-box fontSize="1.125rem" fontWeight="600" class="gray"> Junior Game Developer at Gameloft</c-box>
                   <c-box fontSize="sm" class="gray-500">2013-2014</c-box>
@@ -40,7 +42,9 @@
           <c-stack :spacing="2" class="experience-card wow animate__slideInUp">
             <c-box>
               <c-flex align="center">
-                <img src="~/assets/images/fpt-software.jpeg" class="company-logo"/>
+                <c-link href="https://www.fpt-software.com/" target="_blank">
+                  <img src="~/assets/images/fpt-software.jpeg" class="company-logo"/>
+                </c-link>
                 <c-box>
                   <c-box fontSize="1.125rem" fontWeight="600" class="gray"> Junior Software Developer at FPT</c-box>
                   <c-box fontSize="sm" class="gray-500">2014-2015</c-box>
@@ -52,7 +56,9 @@
           <c-stack :spacing="2" class="experience-card wow animate__slideInUp">
             <c-box>
               <c-flex align="center">
-                <img src="~/assets/images/eastagile.png" class="company-logo" style="width:70px" />
+                <c-link href="https://www.eastagile.com/" target="_blank">
+                  <img src="~/assets/images/eastagile.png" class="company-logo" style="width:70px" />
+                </c-link>
                 <c-box>
                   <c-box fontSize="1.125rem" fontWeight="600" class="gray"> Senior Software Developer at East Agile</c-box>
                   <c-box fontSize="sm" class="gray-500">2015-2019</c-box>
