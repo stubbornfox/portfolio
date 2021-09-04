@@ -47,7 +47,7 @@ html {
 
 .cover {
   background-image:  url('~assets/images/cover.svg');
-  height:  100vh;
+  min-height:  100vh;
 }
 
 .title {

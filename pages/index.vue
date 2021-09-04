@@ -21,7 +21,7 @@
           </c-flex>
       </c-flex>
     </div>
-    <c-flex :p="['50px 20px', '50px 20px', '100px 40px']" maxW="1024px" m="0 auto" :flexDirection="['column', 'column', 'row']" id="experience">
+    <c-flex :p="['150px 20px', '50px 20px', '100px 40px']" maxW="1024px" m="0 auto" :flexDirection="['column', 'column', 'row']" id="experience">
       <c-stack :pr="[0, 0, '20px']" spacing="8">
         <c-heading as="h2" :fontSize="['2rem','2rem','4xl','5xl']" class="green">Experience</c-heading>
         <c-stack :spacing="5">
