@@ -97,7 +97,7 @@
       </c-stack>
       </c-stack>
       <c-divider orientation="vertical" />
-      <c-stack :pl="[0, 0, '40px']" :pt="['40px', '40px', 0]" flexGrow="1" spacing="8">
+      <c-stack :pl="[0, 0, '20px']" :pt="['40px', '40px', 0]" flexGrow="1" spacing="8">
         <c-heading  as="h2" :fontSize="['2rem','2rem','4xl','5xl']" class="green">Skills</c-heading>
         <c-stack spacing="5">
           <c-heading fontSize="1.125rem" fontWeight="600" class="gray">Web Application</c-heading>
@@ -108,7 +108,7 @@
                   RoR
                 </c-circular-progress-label>
               </c-circular-progress>
-              <c-text color="gray.500" fontSize="sm">4 yrs+</c-text>
+              <c-text color="gray.500" fontSize="sm"><span style="font-weight: bold;">4</span> yrs+</c-text>
             </c-flex>
             <c-flex justify="center" flexDirection="column" align="center">
               <c-circular-progress :value="100" color="green" size="60px" :thickness="0.1" class="wow animate__fadeIn">
@@ -116,7 +116,7 @@
                   HTML
                 </c-circular-progress-label>
               </c-circular-progress>
-              <c-text color="gray.500" fontSize="sm">5 yrs+</c-text>
+               <c-text color="gray.500" fontSize="sm"><span style="font-weight: bold;">5</span> yrs+</c-text>
             </c-flex>
             <c-flex justify="center" flexDirection="column" align="center">
               <c-circular-progress :value="100" color="green" size="60px" :thickness="0.1" class="wow animate__fadeIn">
@@ -124,7 +124,7 @@
                   JS
                 </c-circular-progress-label>
               </c-circular-progress>
-              <c-text color="gray.500" fontSize="sm">5 yrs+</c-text>
+               <c-text color="gray.500" fontSize="sm"><span style="font-weight: bold;">5</span> yrs+</c-text>
             </c-flex>
             <c-flex justify="center" flexDirection="column" align="center">
               <c-circular-progress :value="100" color="green" size="60px" :thickness="0.1" class="wow animate__fadeIn">
@@ -132,7 +132,7 @@
                   CSS
                 </c-circular-progress-label>
               </c-circular-progress>
-              <c-text color="gray.500" fontSize="sm">5 yrs+</c-text>
+              <c-text color="gray.500" fontSize="sm"><span style="font-weight: bold;">5</span> yrs+</c-text>
             </c-flex>
           </c-flex>
           <c-divider />
@@ -144,7 +144,7 @@
                   Python
                 </c-circular-progress-label>
               </c-circular-progress>
-              <c-text color="gray.500" fontSize="sm">9 mths+</c-text>
+              <c-text color="gray.500" fontSize="sm"><span style="font-weight: bold;">9</span> mths+</c-text>
             </c-flex>
             <c-flex justify="center" flexDirection="column" align="center">
               <c-circular-progress :value="100" color="green" size="60px" :thickness="0.1" class="wow animate__fadeIn">
@@ -152,7 +152,7 @@
                   Spark ML
                 </c-circular-progress-label>
               </c-circular-progress>
-              <c-text color="gray.500" fontSize="sm">2 mths</c-text>
+              <c-text color="gray.500" fontSize="sm"><span style="font-weight: bold;">2</span> mths</c-text>
             </c-flex>
           </c-flex>
         </c-stack>
