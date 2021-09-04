@@ -2,8 +2,8 @@
   <div class="container">
     <div class="cover">
       <c-flex align="center">
-          <c-flex size="100%" align="center" justify="center" height="100vh" flexDirection="column">
-            <c-stack is-inline>
+          <c-flex size="100%" align="center" justify="center" minH="100vh" flexDirection="column">
+            <c-stack is-inline :mt="['30px', '30px', 0]">
               <c-avatar size="2xl" name="Ha Le" class="ha-le wow animate__slideInDown"/>
             </c-stack>
             <c-text text-align="center">
@@ -21,7 +21,7 @@
           </c-flex>
       </c-flex>
     </div>
-    <c-flex :p="['150px 20px', '50px 20px', '100px 40px']" maxW="1024px" m="0 auto" :flexDirection="['column', 'column', 'row']" id="experience">
+    <c-flex :p="['50px 20px', '50px 20px', '100px 40px']" maxW="1024px" m="0 auto" :flexDirection="['column', 'column', 'row']" id="experience">
       <c-stack :pr="[0, 0, '20px']" spacing="8">
         <c-heading as="h2" :fontSize="['2rem','2rem','4xl','5xl']" class="green">Experience</c-heading>
         <c-stack :spacing="5">
