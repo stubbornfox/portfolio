@@ -21,9 +21,82 @@
           </c-flex>
       </c-flex>
     </div>
+    <c-flex :p="['100px 20px', '100px 20px', '100px 40px']" maxW="1024px" m="0 auto" :flexDirection="['column', 'column', 'row']">
+      <c-stack :pr="[0, 0, '20px']" spacing="8">
+        <c-heading as="h2" :fontSize="['2rem','2rem','4xl','5xl']" class="green">Experience</c-heading>
+        <c-stack :spacing="5">
+          <c-stack :spacing="2" class="experience-card wow animate__slideInUp">
+            <c-box>
+              <c-flex align="center">
+                <img src="~/assets/images/gameloft.png" class="company-logo"/>
+                <c-box>
+                  <c-box fontSize="1.125rem" fontWeight="600" class="gray"> Junior Game Developer at Gameloft</c-box>
+                  <c-box fontSize="sm" class="gray-500">2013-2014</c-box>
+                </c-box>
+              </c-flex>
+            </c-box>
+            <c-box fontSize="sm" class="gray-500" mt="10px">Java Developer - Develop "Heroes of Order & Chaos" game</c-box>
+          </c-stack>
+          <c-stack :spacing="2" class="experience-card wow animate__slideInUp">
+            <c-box>
+              <c-flex align="center">
+                <img src="~/assets/images/fpt-software.jpeg" class="company-logo"/>
+                <c-box>
+                  <c-box fontSize="1.125rem" fontWeight="600" class="gray"> Junior Software Developer at FPT</c-box>
+                  <c-box fontSize="sm" class="gray-500">2014-2015</c-box>
+                </c-box>
+              </c-flex>
+            </c-box>
+            <c-box fontSize="sm" class="gray-500">ASP.Net Developer - Develop internal software for PETRONAS Digital Sdn Bhd - Malaysia</c-box>
+          </c-stack>
+          <c-stack :spacing="2" class="experience-card wow animate__slideInUp">
+            <c-box>
+              <c-flex align="center">
+                <img src="~/assets/images/eastagile.png" class="company-logo" style="width:70px" />
+                <c-box>
+                  <c-box fontSize="1.125rem" fontWeight="600" class="gray"> Senior Software Developer at East Agile</c-box>
+                  <c-box fontSize="sm" class="gray-500">2015-2019</c-box>
+                </c-box>
+              </c-flex>
+            </c-box>
+            <c-box fontSize="sm" class="gray-500">
+              <c-text mt="10px">Ruby on Rails Developer - Develop Web applications:</c-text>
+              <c-list spacing="1"  as="ol" ml="5px">
+                <c-list-item>
+                  <c-list-icon icon="check-circle" color="green.500" />
+                  <c-link color="green.500" href="https://www.thestorefront.com/" target="_blank">
+                    The storefront
+                  </c-link>
+                   - Space Renting app
+                </c-list-item>
+                <c-list-item>
+                   <c-list-icon icon="check-circle" color="green.500" />
+                  <c-link color="green.500" href="https://www.applyflow.com/" target="_blank">
+                    Applyflow
+                  </c-link>
+                  - Recruitment platform
+                </c-list-item>
+                <c-list-item>
+                   <c-list-icon icon="check-circle" color="green.500" />
+                  <c-link color="green.500" href="https://www.clistudios.com/" target="_blank">
+                    CLI Studios
+                  </c-link>
+                    - Online Dance Teaching platform
+                </c-list-item>
+              </c-list>
+            </c-box>
+          </c-stack>
+        </c-stack>
+        </c-stack>
+      </c-stack>
+      </c-stack>
+      <c-box :pl="[0, 0, '40px']" :pt="['40px', '40px', 0]">
+        <c-heading  as="h2" :fontSize="['2rem','2rem','4xl','5xl']" class="green">Skills</c-heading>
+      </c-box>
+    </c-flex>
     <c-flex id="education" align="center" flexDirection="column" :p="['100px 20px']">
-      <c-heading align="center" as="h2" :fontSize="['2rem','2rem','4xl','5xl']" fontWeight="700" lineHeight="1" m="20px" class="wow animate__fadeIn">
-        <span class="orange">Education Background</span>
+      <c-heading align="center" as="h2" :fontSize="['2rem','2rem','4xl','5xl']" fontWeight="700" lineHeight="1" m="20px 0 60px" class="wow animate__fadeIn">
+        <span class="green">Education Background</span>
       </c-heading>
       <div class="education-bg"></div>
         <c-box class='education-content'>
@@ -32,7 +105,7 @@
               <c-avatar size="xl" name="UT" class="twente" borderRadius="md"/>
               <c-box ml="3">
                 <c-box>University of Twente - Master Computer Science</c-box>
-                <c-box>(Le Thi Nhi Ha scholarship)</c-box>
+                <c-box>-</c-box>
                 <c-box>2020-2022</c-box>
               </c-box>
             </c-flex>
@@ -42,7 +115,7 @@
             <c-avatar size="xl" name="UT" class="fpt" borderRadius="md"/>
              <c-box ml="3">
               <c-box >FPT University - Bachelor Software Engineering</c-box>
-              <c-box>(Full scholarship)</c-box>
+              <c-box>8.78</c-box>
               <c-box>2010-2014</c-box>
             </c-box>
           </c-flex>
@@ -91,7 +164,7 @@
               <input type="hidden" name="form-name" value="contact" />
               <c-text :fontSize="['2xl','2xl','5xl']" fontWeight="700">Contact me<span class="pink">!</span></c-text>
               <c-stack spacing="3">
-                <c-text fontSize="sm" class="gray-500" fontWeight="400">Send me a message then I will reach you as soon as possible</c-text>
+                <c-text fontSize="sm" class="gray-500" fontWeight="400">Send me a message if you would like to talk</c-text>
                 <c-input placeholder="Email" size="md" name="email" />
                 <c-input placeholder="Your name" size="md" name="name" />
                 <c-input placeholder="Your phone" size="md" name="phone"/>

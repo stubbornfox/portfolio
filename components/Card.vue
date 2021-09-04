@@ -16,8 +16,8 @@
   export default {
     props: ['active', 'cardNumber', 'pos'],
     methods: {
-      activeCard() {
-        this.$emit("active-card", this.cardNumber, this.pos);
+      activeCard(event) {
+        this.$emit("active-card", this.cardNumber, this.pos, event.target.type);
       }
     }
   }
