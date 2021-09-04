@@ -21,7 +21,7 @@
           </c-flex>
       </c-flex>
     </div>
-    <c-flex :p="['100px 20px', '100px 20px', '100px 40px']" maxW="1024px" m="0 auto" :flexDirection="['column', 'column', 'row']">
+    <c-flex :p="['50px 20px', '50px 20px', '100px 40px']" maxW="1024px" m="0 auto" :flexDirection="['column', 'column', 'row']" id="experience">
       <c-stack :pr="[0, 0, '20px']" spacing="8">
         <c-heading as="h2" :fontSize="['2rem','2rem','4xl','5xl']" class="green">Experience</c-heading>
         <c-stack :spacing="5">
@@ -90,11 +90,64 @@
         </c-stack>
       </c-stack>
       </c-stack>
-      <c-box :pl="[0, 0, '40px']" :pt="['40px', '40px', 0]">
+      <c-divider orientation="vertical" />
+      <c-stack :pl="[0, 0, '40px']" :pt="['40px', '40px', 0]" flexGrow="1" spacing="8">
         <c-heading  as="h2" :fontSize="['2rem','2rem','4xl','5xl']" class="green">Skills</c-heading>
-      </c-box>
+        <c-stack spacing="5">
+          <c-flex justify="space-between">
+            <c-text>Ruby</c-text>
+            <c-box>
+              <c-icon name="star" color="red.400" />
+              <c-icon name="star" color="red.400" />
+              <c-icon name="star" color="red.400" />
+              <c-icon name="star" color="red.400" />
+              <c-icon name="star" color="gray.300" />
+            </c-box>
+          </c-flex>
+          <c-flex justify="space-between">
+            <c-text>HTML</c-text>
+            <c-box>
+              <c-icon name="star" color="red.400" />
+              <c-icon name="star" color="red.400" />
+              <c-icon name="star" color="red.400" />
+              <c-icon name="star" color="red.400" />
+              <c-icon name="star" color="gray.300" />
+            </c-box>
+          </c-flex>
+          <c-flex justify="space-between">
+            <c-text>JS</c-text>
+            <c-box>
+              <c-icon name="star" color="red.400" />
+              <c-icon name="star" color="red.400" />
+              <c-icon name="star" color="red.400" />
+              <c-icon name="star" color="red.400" />
+              <c-icon name="star" color="gray.300" />
+            </c-box>
+          </c-flex>
+          <c-flex justify="space-between">
+            <c-text>CSS</c-text>
+            <c-box>
+              <c-icon name="star" color="red.400" />
+              <c-icon name="star" color="red.400" />
+              <c-icon name="star" color="red.400" />
+              <c-icon name="star" color="red.400" />
+              <c-icon name="star" color="gray.300" />
+            </c-box>
+          </c-flex>
+          <c-flex justify="space-between">
+            <c-text>Python</c-text>
+            <c-box>
+              <c-icon name="star" color="red.400" />
+              <c-icon name="star" color="gray.300" />
+              <c-icon name="star" color="gray.300" />
+              <c-icon name="star" color="gray.300" />
+              <c-icon name="star" color="gray.300" />
+            </c-box>
+          </c-flex>
+        </c-stack>
+      </c-stack>
     </c-flex>
-    <c-flex id="education" align="center" flexDirection="column" :p="['100px 20px']">
+    <c-flex id="education" align="center" flexDirection="column" :p="['50px 20px', '50px 20px', '100px 20px']">
       <c-heading align="center" as="h2" :fontSize="['2rem','2rem','4xl','5xl']" fontWeight="700" lineHeight="1" m="20px 0 60px" class="wow animate__fadeIn">
         <span class="green">Education Background</span>
       </c-heading>
@@ -154,13 +207,13 @@
         <c-flex align="center" :flexDirection="['column', 'column', 'row']">
           <c-heading as="h2"
             :fontSize="['2rem','2rem','5xl','6xl']"
-            :m="['30px','30px', '64px 40px 64px 0']"
+            :m="['20px','20px', '64px 40px 64px 0']"
             :textAlign="['center', 'center', 'left']"
             class="current-position wow animate__slideInLeft">
             Software Engineer <span class="pink">&</span> Data Scientist
           </c-heading>
           <form class="wow animate__slideInRight" ml="5" name="contact" method="POST" netlify netlify-honeypot="bot-field" action="/thankyou/">
-            <c-box  :width="['94%', '400px', '560px']" :p="['20px', '20px', '40px']" m="auto"  class="contact-form">
+            <c-box  :width="['100%', '400px', '560px']" :p="['20px', '20px', '40px']" m="auto"  class="contact-form">
               <input type="hidden" name="form-name" value="contact" />
               <c-text :fontSize="['2xl','2xl','5xl']" fontWeight="700">Contact me<span class="pink">!</span></c-text>
               <c-stack spacing="3">

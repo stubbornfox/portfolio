@@ -8,7 +8,8 @@
           A dedicated Web Developer who has 5 years experience of ruby on rails 💎, this person also dives into  Data Science  for her Majesty ✍️.
         </p>
       </c-text>
-      <c-button variant-color="green" rounded="20px">Experience & Skills</c-button>
+      <c-button variant-color="green" rounded="20px"  v-scroll-to="{
+     el: '#experience', lazy: false}">Experience & Skills</c-button>
     </div>
   </c-box>
 </template>
