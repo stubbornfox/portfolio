@@ -5,7 +5,8 @@
       <span class="green">coding and investing</span>
       <c-text fontSize="sm" mt="3" mb="3">
         <p  class="gray-pale">
-          A dedicated Web Developer who has 5 years experience of ruby on rails 💎, this person also dives into  Data Science  for her Majesty ✍️.
+          A dedicated Web Developer who has 5 years experience of ruby on rails 💎, rec dives into  Data Science  for her Majesty ✍️.
+          In investing, she strongly believes in the future of cryptocurrency.
         </p>
       </c-text>
       <c-button variant-color="green" rounded="20px"  v-scroll-to="{
