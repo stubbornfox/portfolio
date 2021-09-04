@@ -28,34 +28,6 @@
           <c-stack :spacing="2" class="experience-card wow animate__slideInUp">
             <c-box>
               <c-flex align="center">
-                <c-link href="https://www.gameloft-sea.com/" target="_blank">
-                  <img src="~/assets/images/gameloft.png" class="company-logo"/>
-                </c-link>
-                <c-box>
-                  <c-box fontSize="1.125rem" fontWeight="600" class="gray"> Junior Game Developer at Gameloft</c-box>
-                  <c-box fontSize="sm" class="gray-500">2013-2014</c-box>
-                </c-box>
-              </c-flex>
-            </c-box>
-            <c-box fontSize="sm" class="gray-500" mt="10px">Java Developer - Develop "Heroes of Order & Chaos" game</c-box>
-          </c-stack>
-          <c-stack :spacing="2" class="experience-card wow animate__slideInUp">
-            <c-box>
-              <c-flex align="center">
-                <c-link href="https://www.fpt-software.com/" target="_blank">
-                  <img src="~/assets/images/fpt-software.jpeg" class="company-logo"/>
-                </c-link>
-                <c-box>
-                  <c-box fontSize="1.125rem" fontWeight="600" class="gray"> Junior Software Developer at FPT</c-box>
-                  <c-box fontSize="sm" class="gray-500">2014-2015</c-box>
-                </c-box>
-              </c-flex>
-            </c-box>
-            <c-box fontSize="sm" class="gray-500">ASP.Net Developer - Develop internal software for PETRONAS Digital Sdn Bhd - Malaysia</c-box>
-          </c-stack>
-          <c-stack :spacing="2" class="experience-card wow animate__slideInUp">
-            <c-box>
-              <c-flex align="center">
                 <c-link href="https://www.eastagile.com/" target="_blank">
                   <img src="~/assets/images/eastagile.png" class="company-logo" style="width:70px" />
                 </c-link>
@@ -92,6 +64,34 @@
               </c-list>
             </c-box>
           </c-stack>
+          <c-stack :spacing="2" class="experience-card wow animate__slideInUp">
+            <c-box>
+              <c-flex align="center">
+                <c-link href="https://www.fpt-software.com/" target="_blank">
+                  <img src="~/assets/images/fpt-software.jpeg" class="company-logo"/>
+                </c-link>
+                <c-box>
+                  <c-box fontSize="1.125rem" fontWeight="600" class="gray"> Junior Software Developer at FPT</c-box>
+                  <c-box fontSize="sm" class="gray-500">2014-2015</c-box>
+                </c-box>
+              </c-flex>
+            </c-box>
+            <c-box fontSize="sm" class="gray-500">ASP.Net Developer - Develop internal software for PETRONAS Digital Sdn Bhd - Malaysia</c-box>
+          </c-stack>
+          <c-stack :spacing="2" class="experience-card wow animate__slideInUp">
+            <c-box>
+              <c-flex align="center">
+                <c-link href="https://www.gameloft-sea.com/" target="_blank">
+                  <img src="~/assets/images/gameloft.png" class="company-logo"/>
+                </c-link>
+                <c-box>
+                  <c-box fontSize="1.125rem" fontWeight="600" class="gray"> Junior Game Developer at Gameloft</c-box>
+                  <c-box fontSize="sm" class="gray-500">2013-2014</c-box>
+                </c-box>
+              </c-flex>
+            </c-box>
+            <c-box fontSize="sm" class="gray-500" mt="10px">Java Developer - Develop "Heroes of Order & Chaos" game</c-box>
+          </c-stack>
         </c-stack>
         </c-stack>
       </c-stack>
@@ -100,55 +100,60 @@
       <c-stack :pl="[0, 0, '40px']" :pt="['40px', '40px', 0]" flexGrow="1" spacing="8">
         <c-heading  as="h2" :fontSize="['2rem','2rem','4xl','5xl']" class="green">Skills</c-heading>
         <c-stack spacing="5">
+          <c-heading fontSize="1.125rem" fontWeight="600" class="gray">Web Application</c-heading>
           <c-flex justify="space-between">
-            <c-text>Ruby</c-text>
-            <c-box>
-              <c-icon name="star" color="red.400" />
-              <c-icon name="star" color="red.400" />
-              <c-icon name="star" color="red.400" />
-              <c-icon name="star" color="red.400" />
-              <c-icon name="star" color="gray.300" />
-            </c-box>
+            <c-flex justify="center" flexDirection="column" align="center">
+              <c-circular-progress :value="100" color="green" size="60px" :thickness="0.1" class="wow animate__fadeIn">
+                <c-circular-progress-label>
+                  RoR
+                </c-circular-progress-label>
+              </c-circular-progress>
+              <c-text color="gray.500" fontSize="sm">4 yrs+</c-text>
+            </c-flex>
+            <c-flex justify="center" flexDirection="column" align="center">
+              <c-circular-progress :value="100" color="green" size="60px" :thickness="0.1" class="wow animate__fadeIn">
+                <c-circular-progress-label>
+                  HTML
+                </c-circular-progress-label>
+              </c-circular-progress>
+              <c-text color="gray.500" fontSize="sm">5 yrs+</c-text>
+            </c-flex>
+            <c-flex justify="center" flexDirection="column" align="center">
+              <c-circular-progress :value="100" color="green" size="60px" :thickness="0.1" class="wow animate__fadeIn">
+                <c-circular-progress-label>
+                  JS
+                </c-circular-progress-label>
+              </c-circular-progress>
+              <c-text color="gray.500" fontSize="sm">5 yrs+</c-text>
+            </c-flex>
+            <c-flex justify="center" flexDirection="column" align="center">
+              <c-circular-progress :value="100" color="green" size="60px" :thickness="0.1" class="wow animate__fadeIn">
+                <c-circular-progress-label>
+                  CSS
+                </c-circular-progress-label>
+              </c-circular-progress>
+              <c-text color="gray.500" fontSize="sm">5 yrs+</c-text>
+            </c-flex>
           </c-flex>
-          <c-flex justify="space-between">
-            <c-text>HTML</c-text>
-            <c-box>
-              <c-icon name="star" color="red.400" />
-              <c-icon name="star" color="red.400" />
-              <c-icon name="star" color="red.400" />
-              <c-icon name="star" color="red.400" />
-              <c-icon name="star" color="gray.300" />
-            </c-box>
-          </c-flex>
-          <c-flex justify="space-between">
-            <c-text>JS</c-text>
-            <c-box>
-              <c-icon name="star" color="red.400" />
-              <c-icon name="star" color="red.400" />
-              <c-icon name="star" color="red.400" />
-              <c-icon name="star" color="red.400" />
-              <c-icon name="star" color="gray.300" />
-            </c-box>
-          </c-flex>
-          <c-flex justify="space-between">
-            <c-text>CSS</c-text>
-            <c-box>
-              <c-icon name="star" color="red.400" />
-              <c-icon name="star" color="red.400" />
-              <c-icon name="star" color="red.400" />
-              <c-icon name="star" color="red.400" />
-              <c-icon name="star" color="gray.300" />
-            </c-box>
-          </c-flex>
-          <c-flex justify="space-between">
-            <c-text>Python</c-text>
-            <c-box>
-              <c-icon name="star" color="red.400" />
-              <c-icon name="star" color="gray.300" />
-              <c-icon name="star" color="gray.300" />
-              <c-icon name="star" color="gray.300" />
-              <c-icon name="star" color="gray.300" />
-            </c-box>
+          <c-divider />
+          <c-heading fontSize="1.125rem" fontWeight="600" class="gray">Machine Learning</c-heading>
+          <c-flex>
+            <c-flex justify="center" flexDirection="column" align="center" mr="10px">
+              <c-circular-progress :value="100" color="green" size="60px" :thickness="0.1" class="wow animate__fadeIn">
+                <c-circular-progress-label>
+                  Python
+                </c-circular-progress-label>
+              </c-circular-progress>
+              <c-text color="gray.500" fontSize="sm">9 mths+</c-text>
+            </c-flex>
+            <c-flex justify="center" flexDirection="column" align="center">
+              <c-circular-progress :value="100" color="green" size="60px" :thickness="0.1" class="wow animate__fadeIn">
+                <c-circular-progress-label align="center">
+                  Spark ML
+                </c-circular-progress-label>
+              </c-circular-progress>
+              <c-text color="gray.500" fontSize="sm">2 mths</c-text>
+            </c-flex>
           </c-flex>
         </c-stack>
       </c-stack>
