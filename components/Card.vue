@@ -6,7 +6,6 @@
       <c-text fontSize="sm" mt="3" mb="3">
         <p  class="gray-pale">
           A dedicated Web Developer who has 5 years experience of ruby on rails 💎, recently diving into  Data Science  for her Majesty ✍️.
-          Investing for a living, she strongly believes in the future of cryptocurrency.
         </p>
       </c-text>
       <c-button variant-color="green" rounded="20px"  v-scroll-to="{
