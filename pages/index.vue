@@ -7,7 +7,7 @@
               <c-avatar size="2xl" name="Ha Le" class="ha-le wow animate__slideInDown"/>
             </c-stack>
             <c-text text-align="center">
-              <c-heading as="h1" :fontSize="['2.5rem', '2.5rem','4rem']" :m="['20px']" class="title wow animate__fadeIn">Software Engineer</c-heading>
+              <c-heading as="h1" :fontSize="['2.5rem', '2.5rem','4rem']" :m="['20px']" class="title wow animate__fadeIn">Software & ML Engineer</c-heading>
             </c-text>
             <c-flex align="center" justify="center" class="carosuel" flexDirection="column"  mt="7">
               <Card ref="card1" v-bind:class="{ backward: backward == 1}" :active="currentCard == 1" :cardNumber="cardNumber1" :pos="1" @active-card="update" class="wow animate__slideInUp" @animationend.native="removeAnimateClass"/>

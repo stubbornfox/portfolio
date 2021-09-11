@@ -4,14 +4,14 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Ha Le',
+    title: 'Ha Le - Software & ML Engineer',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Le Thi Nhi Ha' },
+      { hid: 'description', name: 'description', content: 'Good software, good life' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
