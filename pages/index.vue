@@ -176,7 +176,7 @@
           </p>
           <p>
             <c-flex  class="wow animate__slideInRight">
-            <c-avatar size="xl" name="UT" class="fpt" borderRadius="md"/>
+            <c-avatar size="xl" name="FPT" class="fpt" borderRadius="md"/>
              <c-box ml="3">
               <c-box >FPT University - Bachelor Software Engineering</c-box>
               <c-box>8.78</c-box>
@@ -186,7 +186,7 @@
           </p>
           <p>
             <c-flex  class="wow animate__slideInLeft">
-              <c-avatar size="xl" name="UT" class="lqd" borderRadius="md"/>
+              <c-avatar size="xl" name="LQD" class="lqd" borderRadius="md"/>
              <c-box ml="3">
               <c-box >Lê Quý Đôn High School for the Gifted, Quang Tri</c-box>
               <c-box>2007-2010</c-box>
