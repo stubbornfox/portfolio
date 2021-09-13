@@ -1,10 +1,15 @@
 <template>
   <div class="container">
-    <div class="cover">
+    <c-box class="cover" :p="['50px 0', '50px 0', 'unset']">
       <c-flex align="center">
           <c-flex size="100%" align="center" justify="center" minH="100vh" flexDirection="column">
             <c-stack is-inline :mt="['30px', '30px', 0]">
-              <c-avatar size="2xl" name="Ha Le" class="ha-le wow animate__slideInDown"/>
+              <c-avatar size="xl" name="Ha Le" class="ha-le wow animate__slideInDown"/>
+              <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+              <c-box  :pos="['absolute']" :left="['unset', 'unset','50%','calc(50% + 200px)']" :bottom="['-70px','-70px',0]" :right="['-90px','-90px', 'unset']">
+                <lottie-player src="https://assets6.lottiefiles.com/temp/lf20_l0ORt3.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay>
+                </lottie-player>
+              </c-box>
             </c-stack>
             <c-text text-align="center">
               <c-heading as="h1" :fontSize="['2.5rem', '2.5rem','4rem']" :m="['20px']" class="title wow animate__fadeIn">Software & ML Engineer</c-heading>
@@ -20,7 +25,7 @@
             </c-flex>
           </c-flex>
       </c-flex>
-    </div>
+    </c-box>
     <c-flex :p="['50px 20px', '50px 20px', '100px 40px']" maxW="1024px" m="0 auto" :flexDirection="['column', 'column', 'row']" id="experience">
       <c-stack :pr="[0, 0, '20px']" spacing="8">
         <c-heading as="h2" :fontSize="['2rem','2rem','4xl','5xl']" class="green">Experience</c-heading>
@@ -215,16 +220,16 @@
     </c-flex>
     <c-flex class="contact" width="100%" justify="center" id="contact-me">
       <c-flex align="center" maxW="5xl">
-        <c-flex align="center" :flexDirection="['column', 'column', 'row']">
+        <c-flex align="center" :flexDirection="['column', 'column', 'column', 'row']">
           <c-heading as="h2"
             :fontSize="['2rem','2rem','5xl','6xl']"
-            :m="['20px','20px', '64px 40px 64px 0']"
+            :m="['20px','20px', '20px','64px 40px 64px 0']"
             :textAlign="['center', 'center', 'left']"
             class="current-position wow animate__slideInLeft">
-            Software Engineer <span class="pink">&</span> Data Scientist
+            Software Engineer <span class="pink">&</span> <br/>Data Scientist
           </c-heading>
           <form class="wow animate__slideInRight" ml="5" name="contact" method="POST" netlify netlify-honeypot="bot-field" action="/thankyou/">
-            <c-box  :width="['100%', '400px', '560px']" :p="['20px', '20px', '40px']" m="auto"  class="contact-form">
+            <c-box  :width="['100%', '400px', '400px', '560px']" :p="['20px', '20px', '40px']" m="auto"  class="contact-form">
               <input type="hidden" name="form-name" value="contact" />
               <c-text :fontSize="['2xl','2xl','5xl']" fontWeight="700">Contact me<span class="pink">!</span></c-text>
               <c-stack spacing="3">
