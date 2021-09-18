@@ -226,7 +226,7 @@
           <c-heading as="h2" :fontSize="['2rem','2rem','4xl','5xl']" fontWeight="700" lineHeight="1">
             Why I want to learn <br/> <span class="pink">Machine Learning</span>
           </c-heading>
-          <c-text fontSize="sm" class="gray-500" fontWeight="400">While working on building an online dance studio application, the studio owner wants to improve the system by recommending the listing of videos that suits user's demands. In order to implement this requirement, we have used an opensource prediction platform called PredictionIO. Without any background on machine learning, everything is literally a black box, causing the ignorance for myself. The thirst for knowledge has urged myself to dive into machine learning field so that I can understand the magic behind that system… </c-text>
+          <c-text fontSize="sm" class="gray-500" fontWeight="400">While working on building an online dance studio application, the studio owner wants to improve the system by recommending the listing of videos that suits user's demands. In order to implement this requirement, we have used an opensource prediction platform called PredictionIO. Without any background on machine learning, everything is literally a black box, causing the ignorance carried by myself. The thirst for knowledge has urged myself to dive into machine learning field so that I can understand the magic behind that system… </c-text>
           <c-button-group size="md"  width="100%" mt="5">
             <c-button rounded="20px" class="bg-red-400" variant-color="red">
               Read more
