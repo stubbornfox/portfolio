@@ -276,7 +276,7 @@
           </lottie-player>
         </c-box>
         <c-box z-index="2" width="300px" pos="absolute" left="calc(50% - 140px)" bottom="20px">
-          <c-text fontWeight="500" mt="-50px" color="#718096">The cats made me code this site</c-text>
+          <c-text fontWeight="500" mt="-50px" color="#718096">The cats made me code this</c-text>
           <c-text color="#718096" fontSize="14px">Copyright © 2021 Ha's cats & <a class="green" href="https://chakra-templates.dev/">Chakra</a></c-text>
         </c-box>
     </c-box>
