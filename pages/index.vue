@@ -1,12 +1,15 @@
 <template>
   <div class="container">
+    <c-text as="h1" fontSize="0">Le Thi Nhi Ha</c-text>
+    <c-text as="h1" fontSize="0">Ha Le Twente</c-text>
+    <c-text as="h1" fontSize="0">Ha Le Software Engineer</c-text>
     <c-box class="cover" :p="['50px 0', '50px 0', 'unset']">
       <c-flex align="center">
           <c-flex size="100%" align="center" justify="center" minH="100vh" flexDirection="column">
             <c-avatar size="xl" name="Ha Le" class="ha-le wow animate__fadeIn"/>
             <c-flex>
               <c-text text-align="center">
-                <c-heading as="h1" :fontSize="['2.5rem', '2.5rem','4rem']" :m="['20px']" class="title wow animate__fadeInDown">Software & ML Engineer</c-heading>
+                <c-heading as="h2" :fontSize="['2.5rem', '2.5rem','4rem']" :m="['20px']" class="title wow animate__fadeInDown">Software & ML Engineer</c-heading>
               </c-text>
             </c-flex>
             <c-box v-show="!expanded" width="100%">

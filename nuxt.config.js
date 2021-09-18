@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Ha Le - Software & ML Engineer',
+    title: 'Ha Le - Software and ML Engineer',
     htmlAttrs: {
       lang: 'en'
     },
