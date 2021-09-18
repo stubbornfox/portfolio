@@ -5,7 +5,7 @@
         Let's talk 😀
       </c-text>
       <c-box height="75px"/>
-      <c-button rounded="20px" v-scroll-to="'#contact-me'" mt=5  variant="solid">Contact</c-button>
+      <c-button variant-color="red" rounded="20px" v-scroll-to="'#contact-me'" mt=5  variant="solid">Contact</c-button>
     </div>
   </c-box>
 </template>

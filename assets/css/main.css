@@ -88,7 +88,7 @@ html {
 }
 
 .page-card {
-  transition: top 500ms ease;
+  transition: all 300ms ease;
   position: absolute;
   top:  0;
   animation-fill-mode: forwards;
@@ -99,13 +99,13 @@ html {
   margin: 10px 10px;
 }
 
-.lg-page-card .card-content {
+.lg-page-card .card-content, .page-card .card-content {
   transition: transform 300ms ease;
   will-change: transform;
   height: 100%;
 }
 
-.lg-page-card:hover .card-content {
+.lg-page-card:hover .card-content, .page-card:hover .card-content {
   transform: scale(1.02);
 }
 
@@ -173,7 +173,7 @@ html {
 
 .contact {
   background-image:  url('~assets/images/contact-bg.svg');
-  position: top-left;
+  background-position: top-left;
   min-height: 100vh;
   background-repeat: no-repeat;
 }
@@ -215,9 +215,9 @@ html {
   max-width: 400px;
 }
 
-.page-card:hover {
+/*.page-card:hover {
   box-shadow: 10px 20px 20px 2px rgba(45, 55, 72, 0.04), 10px 40px 45px 2px rgba(45, 55, 72, 0.1);
-}
+}*/
 
 .card-content {
   display: flex;
@@ -256,16 +256,15 @@ html {
 }
 
 .education-bg {
-  opacity: 0.09;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-image:  url('~assets/images/hero1.svg');
-  background-size: 90%;
+  background-image: url('~assets/images/cover2.svg');
   background-repeat: no-repeat;
-  background-position-x: 900px;
+  background-position: top left;
+  z-index: -1;
 }
 
 #education {
@@ -289,7 +288,6 @@ html {
   padding: 40px;
   counter-increment: section;
   position: relative;
-  color: var(--gray-500);
   border-width: 0;
 }
 
