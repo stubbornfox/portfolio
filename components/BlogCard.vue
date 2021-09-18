@@ -6,7 +6,7 @@
       <span class="pink">ML & Web Application</span>
       <c-text fontSize="sm" mt="3" mb="3">
         <p  class="gray-pale">
-          I want to share my knowledge and my current interests about ML and SE, Why should I need to know both ML and SE.
+          The place I share my knowledge and my current interests in ML and SE, Why should I need to know both ML and SE.
         </p>
       </c-text>
       <c-button class="bg-red-400" rounded="20px" v-scroll-to="{
