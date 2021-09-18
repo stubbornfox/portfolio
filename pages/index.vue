@@ -9,27 +9,23 @@
                 <c-heading as="h1" :fontSize="['2.5rem', '2.5rem','4rem']" :m="['20px']" class="title wow animate__fadeInDown">Software & ML Engineer</c-heading>
               </c-text>
             </c-flex>
-            <c-box :display="['block', 'block', 'block', 'block']" width="100%">
+            <c-box v-show="!expanded" width="100%">
               <c-flex align="center" justify="center" class="carosuel" flexDirection="column"  mt="7" mx="auto" position="relative">
                 <Card ref="card1" v-bind:class="{ backward: backward == 1}" :active="currentCard == 1" :cardNumber="cardNumber1" :pos="1" @active-card="update" class="wow animate__slideInUp page-card" @animationend.native="removeAnimateClass"/>
                 <EducationCard ref="card2" :active="currentCard == 2" :cardNumber="cardNumber2" :pos="2"  @active-card="update" class="wow animate__fadeInUp page-card"
                   @animationend.native="removeAnimateClass" v-bind:class="{ backward: backward == 2}"/>
-                <BlogCard ref="card3" :active="currentCard == 3" :cardNumber="cardNumber3" :pos="3"  @active-card="update" class="wow animate__fadeInUp animate__delay-1s page-card"
+                <BlogCard ref="card3" :active="currentCard == 3" :cardNumber="cardNumber3" :pos="3"  @active-card="update" class="wow animate__fadeInUp page-card"
                   @animationend.native="removeAnimateClass" v-bind:class="{ backward: backward == 3}"/>
-                <ContactCard ref="card4" :active="currentCard == 4" :cardNumber="cardNumber4" :pos="4" @active-card="update" class="wow animate__fadeInUp animate__delay-1s page-card"
+                <ContactCard ref="card4" :active="currentCard == 4" :cardNumber="cardNumber4" :pos="4" @active-card="update" class="wow animate__fadeInUp page-card"
                   @animationend.native="removeAnimateClass" v-bind:class="{ backward: backward == 4}"/>
               </c-flex>
             </c-box>
-            <c-box :display="['none', 'none', 'none', 'none']" width="100%">
+            <c-box width="100%" v-show="expanded">
               <c-flex flexWrap="wrap" align="center" justify="center" flexDirection="row"  mx="auto" maxW="1200px" pos="relative">
                 <Card class="lg-page-card wow animate__fadeIn"/>
                 <EducationCard class="lg-page-card wow animate__fadeIn"/>
                 <BlogCard class="wow animate__fadeIn lg-page-card"/>
                 <ContactCard  class="wow animate__fadeIn lg-page-card"/>
-                <c-box  :pos="['absolute']" left="calc(50% - 150px)" top="calc(50% - 150px)" class="wow animate__zoomIn">
-                  <lottie-player src="https://assets6.lottiefiles.com/temp/lf20_l0ORt3.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay>
-                  </lottie-player>
-                </c-box>
               </c-flex>
             </c-box>
           </c-flex>
@@ -227,7 +223,7 @@
           <c-heading as="h2" :fontSize="['2rem','2rem','4xl','5xl']" fontWeight="700" lineHeight="1">
             Why I want to learn <br/> <span class="pink">Machine Learning</span>
           </c-heading>
-          <c-text fontSize="sm" class="gray-500" fontWeight="400">While working on building an online dance studio application, the studio owner wants to improve the system by recommending the listing of videos that suits user's demands. In order to implement this requirement, we have used an opensource prediction platform called PredictionIO. Without any background on machine learning, everything is literally a black box, causing the ignorance for myself. The thirst for knowledge has urged myself to dive into the machine learning field so that I can understand the magic behind that system...</c-text>
+          <c-text fontSize="sm" class="gray-500" fontWeight="400">While working on building an online dance studio application, the studio owner wants to improve the system by recommending the listing of videos that suits user's demands. In order to implement this requirement, we have used an opensource prediction platform called PredictionIO. Without any background on machine learning, everything is literally a black box, causing the ignorance for myself. The thirst for knowledge has urged myself to dive into machine learning field so that I can understand the magic behind that system...</c-text>
           <c-button-group size="md"  width="100%" mt="5">
             <c-button rounded="20px" class="bg-red-400" variant-color="red">
               Read more
@@ -270,6 +266,16 @@
         </c-flex>
       </c-flex>
     </c-flex>
+    <c-box class="wow animate__fadeIn" pos="relative" align="center" :m="['-50px auto', '-50px auto', '-150px auto']">
+        <c-box z-index="1">
+          <lottie-player src="https://assets6.lottiefiles.com/temp/lf20_l0ORt3.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay>
+          </lottie-player>
+        </c-box>
+        <c-box z-index="2" width="300px" pos="absolute" left="calc(50% - 140px)" bottom="20px">
+          <c-text fontWeight="500" mt="-50px" color="#718096">The cats made me code this site</c-text>
+          <c-text color="#718096" fontSize="14px">Copyright © 2021 Ha's cats & <a class="green" href="https://chakra-templates.dev/">Chakra</a></c-text>
+        </c-box>
+    </c-box>
   </div>
 </template>
 
@@ -294,6 +300,7 @@
         cardNumber2: 2,
         cardNumber3: 3,
         cardNumber4: 4,
+        expanded: false,
       }
     },
     methods: {

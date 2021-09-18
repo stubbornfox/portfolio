@@ -85,6 +85,7 @@ html {
   cursor: pointer;
   width: var(--card-width);
   height: var(--card-height);
+  will-change: left, top, width;
 }
 
 .page-card {
@@ -117,7 +118,7 @@ html {
 
 .page-card.backward{
   animation-fill-mode: forwards;
-  animation: moveback 1s linear;
+  animation: moveback 500ms ease-out;
   z-index: 1;
   top:  550px;
 }
@@ -127,7 +128,6 @@ html {
   top:  90px;
   width: calc( var(--card-width) * 0.85);
   height: calc( var(--card-height) * 0.85);
-  animation-delay: 0.5s;
 }
 
 
@@ -145,14 +145,6 @@ html {
   height: calc( var(--card-height) * 0.5);
 }
 
-.page-card.active {
-  /*cursor: default;
-  transform: scale(1);
-  top: 0;
-  z-index: 4;*/
-  /*animation-name: swing-forwards;*/
-}
-
 .page-card .card-content {
   overflow: hidden;
   -moz-overflow:hidden;
@@ -167,7 +159,7 @@ html {
 .contact-card {
   background-image:  url('~assets/images/card.svg');
   background-position: bottom right;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -377,9 +369,9 @@ html {
 
 @keyframes moveback {
   0%   { top: 0; z-index: 4; width: calc( var(--card-width));  height: calc( var(--card-height));}
-  35%  { top: -350px; z-index: 4; width: calc( var(--card-width) * 0.95);  height: calc( var(--card-height) * 0.95);}
-  70%  { top: 0; z-index: 3; width: calc( var(--card-width) * 0.9);  height: calc( var(--card-height) * 0.9);}
-  90% { top: 125; z-index: 2; width: calc( var(--card-width) * 0.6);  height: calc( var(--card-height) * 0.6);}
+  25%  { top: -125px; z-index: 4; width: calc( var(--card-width) * 0.95);  height: calc( var(--card-height) * 0.95);}
+  50%  { top: 0; z-index: 3; width: calc( var(--card-width) * 0.9);  height: calc( var(--card-height) * 0.9);}
+  75% { top: 125; z-index: 2; width: calc( var(--card-width) * 0.6);  height: calc( var(--card-height) * 0.6);}
   100% { top: 280px; z-index: 1; width: calc( var(--card-width) * 0.5);  height: calc( var(--card-height) * 0.5);}
 }
 
