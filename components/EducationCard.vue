@@ -1,10 +1,10 @@
 <template>
-  <c-box class="page-card" v-bind:class="{ active: active}" @click="activeCard" :cardNumber="cardNumber" :fontSize="['1.5rem','1.5rem', '2rem']" :p="['20px', '20px', '50px 50px 35px']">
+  <c-box v-bind:class="{ active: active}" @click="activeCard" :cardNumber="cardNumber" :fontSize="['1.5rem','1.5rem', '2rem']" :p="['20px', '20px', '50px 50px 35px']">
     <div class="card-content">
       <span class="gray">Almost Master in</span>
-      <span class="orange">Computer Science</span>
-      <img src="~assets/images/hero1.svg" width="120">
-      <c-button variant-color="orange" mb="4"  mt="2" rounded="20px"v-scroll-to="{
+      <span class="green">Computer Science</span>
+      <img src="~assets/images/hero1.svg" style="height: 75px">
+      <c-button variant-color="green" mb="4"  mt="2" rounded="20px"v-scroll-to="{
      el: '#education', offset: 0, lazy: false}">Education</c-button>
     </div>
   </c-box>

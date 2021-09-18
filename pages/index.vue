@@ -4,25 +4,40 @@
       <c-flex align="center">
           <c-flex size="100%" align="center" justify="center" minH="100vh" flexDirection="column">
             <c-stack is-inline :mt="['30px', '30px', 0]">
-              <c-avatar size="xl" name="Ha Le" class="ha-le wow animate__slideInDown"/>
               <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-              <c-box  :pos="['absolute']" :left="['unset', 'unset','50%','calc(50% + 200px)']" :bottom="['-70px','-70px',0]" :right="['-90px','-90px', 'unset']">
-                <lottie-player src="https://assets6.lottiefiles.com/temp/lf20_l0ORt3.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay>
+              <c-box :display="['block', 'block', 'block', 'none']"  m="-50px 0" >
+                <lottie-player src="https://assets6.lottiefiles.com/temp/lf20_l0ORt3.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px;" loop autoplay>
                 </lottie-player>
               </c-box>
             </c-stack>
-            <c-text text-align="center">
-              <c-heading as="h1" :fontSize="['2.5rem', '2.5rem','4rem']" :m="['20px']" class="title wow animate__fadeIn">Software & ML Engineer</c-heading>
-            </c-text>
-            <c-flex align="center" justify="center" class="carosuel" flexDirection="column"  mt="7">
-              <Card ref="card1" v-bind:class="{ backward: backward == 1}" :active="currentCard == 1" :cardNumber="cardNumber1" :pos="1" @active-card="update" class="wow animate__slideInUp" @animationend.native="removeAnimateClass"/>
-              <EducationCard ref="card2" :active="currentCard == 2" :cardNumber="cardNumber2" :pos="2"  @active-card="update" class="wow animate__fadeInUp"
-                @animationend.native="removeAnimateClass" v-bind:class="{ backward: backward == 2}"/>
-              <BlogCard ref="card3" :active="currentCard == 3" :cardNumber="cardNumber3" :pos="3"  @active-card="update" class="wow animate__fadeInUp animate__delay-1s"
-                @animationend.native="removeAnimateClass" v-bind:class="{ backward: backward == 3}"/>
-              <ContactCard ref="card4" :active="currentCard == 4" :cardNumber="cardNumber4" :pos="4" @active-card="update" class="wow animate__fadeInUp animate__delay-1s"
-                @animationend.native="removeAnimateClass" v-bind:class="{ backward: backward == 4}"/>
+            <c-flex>
+              <c-text text-align="center">
+                <c-heading as="h1" :fontSize="['2.5rem', '2.5rem','4rem']" :m="['20px']" class="title wow animate__fadeIn">Software & ML Engineer</c-heading>
+              </c-text>
             </c-flex>
+            <c-box :display="['block', 'block', 'block', 'none']" width="100%">
+              <c-flex align="center" justify="center" class="carosuel" flexDirection="column"  mt="7" mx="auto" position="relative">
+                <Card ref="card1" v-bind:class="{ backward: backward == 1}" :active="currentCard == 1" :cardNumber="cardNumber1" :pos="1" @active-card="update" class="wow animate__slideInUp page-card" @animationend.native="removeAnimateClass"/>
+                <EducationCard ref="card2" :active="currentCard == 2" :cardNumber="cardNumber2" :pos="2"  @active-card="update" class="wow animate__fadeInUp page-card"
+                  @animationend.native="removeAnimateClass" v-bind:class="{ backward: backward == 2}"/>
+                <BlogCard ref="card3" :active="currentCard == 3" :cardNumber="cardNumber3" :pos="3"  @active-card="update" class="wow animate__fadeInUp animate__delay-1s page-card"
+                  @animationend.native="removeAnimateClass" v-bind:class="{ backward: backward == 3}"/>
+                <ContactCard ref="card4" :active="currentCard == 4" :cardNumber="cardNumber4" :pos="4" @active-card="update" class="wow animate__fadeInUp animate__delay-1s page-card"
+                  @animationend.native="removeAnimateClass" v-bind:class="{ backward: backward == 4}"/>
+              </c-flex>
+            </c-box>
+            <c-box :display="['none', 'none', 'none', 'block']" width="100%">
+              <c-flex flexWrap="wrap" align="center" justify="center" flexDirection="row"  mx="auto" maxW="1200px" pos="relative">
+                <Card class="lg-page-card wow animate__fadeIn"/>
+                <EducationCard class="lg-page-card wow animate__fadeIn"/>
+                <BlogCard class="wow animate__fadeIn lg-page-card"/>
+                <ContactCard  class="wow animate__fadeIn lg-page-card"/>
+                <c-box  :pos="['absolute']" left="calc(50% - 150px)" top="calc(50% - 150px)" class="wow animate__bounceIn animate__delay-1s">
+                  <lottie-player src="https://assets6.lottiefiles.com/temp/lf20_l0ORt3.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay>
+                  </lottie-player>
+                </c-box>
+              </c-flex>
+            </c-box>
           </c-flex>
       </c-flex>
     </c-box>
@@ -106,8 +121,8 @@
         <c-heading  as="h2" :fontSize="['2rem','2rem','4xl','5xl']" class="green">Skills</c-heading>
         <c-stack spacing="5">
           <c-heading fontSize="1.125rem" fontWeight="600" class="gray">Web Application</c-heading>
-          <c-flex justify="space-between">
-            <c-flex justify="center" flexDirection="column" align="center">
+          <c-flex>
+            <c-flex justify="center" flexDirection="column" align="center"  mr="10px">
               <c-circular-progress :value="100" color="green" size="60px" :thickness="0.1" class="wow animate__fadeIn">
                 <c-circular-progress-label>
                   RoR
@@ -115,7 +130,7 @@
               </c-circular-progress>
               <c-text color="gray.500" fontSize="sm"><span style="font-weight: bold;">4</span> yrs+</c-text>
             </c-flex>
-            <c-flex justify="center" flexDirection="column" align="center">
+            <c-flex justify="center" flexDirection="column" align="center"  mr="10px">
               <c-circular-progress :value="100" color="green" size="60px" :thickness="0.1" class="wow animate__fadeIn">
                 <c-circular-progress-label>
                   HTML
@@ -123,7 +138,7 @@
               </c-circular-progress>
                <c-text color="gray.500" fontSize="sm"><span style="font-weight: bold;">5</span> yrs+</c-text>
             </c-flex>
-            <c-flex justify="center" flexDirection="column" align="center">
+            <c-flex justify="center" flexDirection="column" align="center"  mr="10px">
               <c-circular-progress :value="100" color="green" size="60px" :thickness="0.1" class="wow animate__fadeIn">
                 <c-circular-progress-label>
                   JS
@@ -131,7 +146,7 @@
               </c-circular-progress>
                <c-text color="gray.500" fontSize="sm"><span style="font-weight: bold;">5</span> yrs+</c-text>
             </c-flex>
-            <c-flex justify="center" flexDirection="column" align="center">
+            <c-flex justify="center" flexDirection="column" align="center"  mr="10px">
               <c-circular-progress :value="100" color="green" size="60px" :thickness="0.1" class="wow animate__fadeIn">
                 <c-circular-progress-label>
                   CSS
@@ -164,6 +179,7 @@
       </c-stack>
     </c-flex>
     <c-flex id="education" align="center" flexDirection="column" :p="['50px 20px', '50px 20px', '100px 20px']">
+      <c-avatar size="xl" name="Ha Le" class="ha-le wow animate__slideInDown"/>
       <c-heading align="center" as="h2" :fontSize="['2rem','2rem','4xl','5xl']" fontWeight="700" lineHeight="1" m="20px 0 60px" class="wow animate__fadeIn">
         <span class="green">Education Background</span>
       </c-heading>
