@@ -170,6 +170,7 @@
               </c-flex>
             </c-flex>
             <c-divider />
+            <Social class="gray-500"/>
           </c-stack>
         </c-stack>
       </c-flex>
@@ -239,8 +240,8 @@
       </c-box>
     </c-flex>
     <c-flex class="contact" width="100%" justify="center" id="contact-me" :pb="['40px', '40px', '20px', 0]">
-      <c-flex align="center" maxW="5xl">
-        <c-flex align="center" :flexDirection="['column', 'column', 'column', 'row']">
+      <c-flex align="center" maxW="5xl" flexGrow="1">
+        <c-flex align="center" :flexDirection="['column', 'column', 'column', 'row']" flexGrow="1" mx="auto">
           <c-heading as="h2"
             :fontSize="['2rem','2rem','5xl','6xl']"
             :m="['20px','20px', '20px','64px 40px 64px 0']"
@@ -248,8 +249,8 @@
             class="current-position wow animate__slideInLeft">
             Software Engineer <span class="pink">&</span> <br/>Data Scientist
           </c-heading>
-          <form class="wow animate__slideInRight" name="contact" method="POST" netlify netlify-honeypot="bot-field" action="/thankyou/">
-            <c-box  :width="['unset', '400px', '400px', '560px']" :p="['20px', '20px', '40px']" m="0 10px"  class="contact-form">
+          <form class="wow animate__slideInRight" style="width: 100%" name="contact" method="POST" netlify netlify-honeypot="bot-field" action="/thankyou/">
+            <c-box  :width="['unset', '400px', '400px', '560px']" :p="['20px', '20px', '40px']"  class="contact-form" mx="20px">
               <input type="hidden" name="form-name" value="contact" />
               <c-text :fontSize="['2xl','2xl','5xl']" fontWeight="700">Contact me<span class="pink">!</span></c-text>
               <c-stack spacing="3">
