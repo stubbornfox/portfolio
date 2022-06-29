@@ -19,7 +19,7 @@
         </transition>
       </c-box>
       <c-flex align="center">
-          <c-flex size="100%" align="center" justify="center" minH="100vh" flexDirection="column">
+          <c-flex size="100%" align="center" justify="center" minH="calc(100vh - 100px);" flexDirection="column">
             <c-avatar size="xl" name="Ha Le" class="ha-le wow animate__fadeIn"/>
             <c-flex>
               <c-text text-align="center">
