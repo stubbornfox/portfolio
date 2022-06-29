@@ -4,6 +4,20 @@
     <c-text as="h1" fontSize="0">Ha Le Twente</c-text>
     <c-text as="h1" fontSize="0">Ha Le Software Engineer</c-text>
     <c-box class="cover" :p="['50px 0', '50px 0', 'unset']">
+      <c-box height='100px'>
+        <c-input placeholder="Should I take a nap?" size="md" name="phone" v-on:keyup.enter="settle"/>
+        <c-button-group size="md" width="100%" mb='10px'>
+          <c-button class="contact-submit1" width="100%" type="submit" @click="settle">
+            Settle
+          </c-button>
+        </c-button-group>
+        <transition name="slide-fade" enter-active-class="animate__animated animate__fadeIn"
+        leave-active-class="">
+          <c-box :key="answer">
+           <c-text align="center" id="answer" class="pink" :fontSize="['1rem']" fontWeight="600">{{answer}}</c-text>
+          </c-box>
+        </transition>
+      </c-box>
       <c-flex align="center">
           <c-flex size="100%" align="center" justify="center" minH="100vh" flexDirection="column">
             <c-avatar size="xl" name="Ha Le" class="ha-le wow animate__fadeIn"/>
@@ -298,6 +312,7 @@
     },
     data() {
       return {
+        answer: '',
         backward: 0,
         currentCard: 1,
         cardNumber1: 1,
@@ -311,6 +326,11 @@
       removeAnimateClass(animateEvent){
         animateEvent.target.classList.remove('animate__animated', 'animate__slideInUp', 'animate__fadeInUp', 'wow', 'animate__delay-1s');
       },
+
+      settle() {
+        this.answer =Math.random() < 0.5 ? 'Yes 😃' : 'No 😬';
+      },
+
       update(cardNumber, pos, type) {
         if (type == 'button')
           return
