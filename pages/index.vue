@@ -4,7 +4,7 @@
     <c-text as="h1" fontSize="0">Ha Le Twente</c-text>
     <c-text as="h1" fontSize="0">Ha Le Software Engineer</c-text>
     <c-box class="cover" :p="['50px 0', '50px 0', 'unset']">
-      <c-box height='100px'>
+      <c-box height='120px'>
         <c-input placeholder="Should I take a nap?" size="md" name="phone" v-on:keyup.enter="settle"/>
         <c-button-group size="md" width="100%" mb='10px'>
           <c-button class="contact-submit1" width="100%" type="submit" @click="settle">
@@ -19,7 +19,7 @@
         </transition>
       </c-box>
       <c-flex align="center">
-          <c-flex size="100%" align="center" justify="center" minH="calc(100vh - 100px);" flexDirection="column">
+          <c-flex size="100%" align="center" justify="center" minH="calc(100vh - 120px);" flexDirection="column">
             <c-avatar size="xl" name="Ha Le" class="ha-le wow animate__fadeIn"/>
             <c-flex>
               <c-text text-align="center">
