@@ -208,7 +208,7 @@
               <c-avatar size="xl" name="UT" class="twente" borderRadius="md"/>
               <c-box ml="3">
                 <c-box color="gray">University of Twente - Master Computer Science</c-box>
-                <c-box>-</c-box>
+                <c-box>8.0</c-box>
                 <c-box color="var(--gray-500)">2020-2022</c-box>
               </c-box>
             </c-flex>
@@ -218,7 +218,7 @@
             <c-avatar size="xl" name="FPT" class="fpt" borderRadius="md"/>
              <c-box ml="3">
               <c-box >FPT University - Bachelor Software Engineering</c-box>
-              <c-box>7.78</c-box>
+              <c-box>8.78</c-box>
               <c-box color="var(--gray-500)">2010-2014</c-box>
             </c-box>
           </c-flex>
